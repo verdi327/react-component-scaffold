@@ -6,7 +6,9 @@
   const argv = require('yargs').argv;
   
   const [folderName, path] = argv._;
-  const stateless = argv.f;
+  const stateless = argv.ns;
+
+  console.log(argv);
   
   if (!folderName) {
     console.log('[ERROR]: Must supply a component name')
@@ -38,25 +40,25 @@
   function setupJsFile(folderName) {
     if (stateless) {
       return `import React from 'react';
-  import './${folderName}.css';
+import './${folderName}.css';
   
-  export default function ${folderName}(props) {
+export default function ${folderName}(props) {
+  return (
+    <div></div>
+  )
+}
+`;
+    }
+    return `import React, {Component} from 'react';
+import './${folderName}.css';
+  
+export default class ${folderName} extends Component {
+  render() {
     return (
       <div></div>
     )
   }
-  `;
-    }
-    return `import React, {Component} from 'react';
-  import './${folderName}.css';
-  
-  export default class ${folderName} extends Component {
-    render() {
-      return (
-        <div></div>
-      )
-    }
-  }
+}
   `;
   };
   
@@ -66,16 +68,16 @@
   
   function setupJsTestFile(folderName) {
     return `import React from 'react';
-  import ReactDOM from 'react-dom';
-  import ${folderName} from './${folderName}';
-  
-  describe('${folderName} Component', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render(< ${folderName} />, div);
-      ReactDOM.unmountComponentAtNode(div);
-    });
-  })
-  `;
+import ReactDOM from 'react-dom';
+import ${folderName} from './${folderName}';
+
+describe('${folderName} Component', () => {
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(< ${folderName} />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+})
+`;
   }
 }())

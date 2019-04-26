@@ -12,14 +12,14 @@ Inside your `package.json` under scripts, add the following:
 
 `"generate": "node ./node_modules/react-component-scaffold/index.js"`
 
-Now, you can use the following command: `npm run generate componentName /path/to/subfolder -f`
+Now, you can use the following command: `npm run generate componentName /path/to/subfolder --ns`
 
 The command takes 1 required arg and 2 optional args.
 
 Where
 * componentName is required
 * path/to/subfolder is optional nested component within your /src dir
-* -f is a flag as to whether you want a stateful or stateless component, it defaults to stateful
+* --ns is a flag as to whether you want a stateful or stateless component, it defaults to stateful
 
 # Examples
 
@@ -31,6 +31,6 @@ Create a class component FooBar inside of /src folder
 
 Creates a class component FooBar inside of /src/Components
 
-`npm run generate FooBar -f`
+`npm run generate FooBar --ns`
 
 Create a stateless component FooBar inside of /src
