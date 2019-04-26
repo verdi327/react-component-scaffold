@@ -1,0 +1,21 @@
+{
+  "name": "react-component-scaffold",
+  "version": "1.0.1",
+  "description": "Automatically generate state and stateless component folder structures from the command line",
+  "main": "index.js",
+  "files": ["index.js"],
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "react",
+    "scaffold",
+    "generator"
+  ],
+  "author": "Michael Verdi",
+  "license": "ISC",
+  "dependencies": {
+    "node-fs": "^0.1.7",
+    "yargs": "^13.2.2"
+  }
+}
