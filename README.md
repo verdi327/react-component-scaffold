@@ -8,9 +8,13 @@ Use `react-component-scaffold` to speed up your development time!
 
 react-component-scaffold is a simple command line tool which can be added to your npm scripts.
 
-The command takes 1 required arg and 2 optional args.
+Inside your `package.json` under scripts, add the following:
 
-`node generate componentName /path/to/subfolder -f`
+`"generate": "node ./node_modules/react-component-scaffold/index.js"`
+
+Now, you can use the following command: `npm run generate componentName /path/to/subfolder -f`
+
+The command takes 1 required arg and 2 optional args.
 
 Where
 * componentName is required
@@ -19,14 +23,14 @@ Where
 
 # Examples
 
-`node generate FooBar` 
+`npm run generate FooBar` 
 
 Create a class component FooBar inside of /src folder
 
-`node generate FooBar /Components`
+`npm run generate FooBar /Components`
 
 Creates a class component FooBar inside of /src/Components
 
-`node generate FooBar -f`
+`npm run generate FooBar -f`
 
 Create a stateless component FooBar inside of /src
