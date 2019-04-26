@@ -13,9 +13,9 @@ The command takes 1 required arg and 2 optional args.
 `node generate componentName /path/to/subfolder -f`
 
 Where
-componentName is required
-path/to/subfolder is optional nested component within your /src dir
--f is a flag as to whether you want a stateful or stateless component, it defaults to stateful
+* componentName is required
+* path/to/subfolder is optional nested component within your /src dir
+* -f is a flag as to whether you want a stateful or stateless component, it defaults to stateful
 
 # Examples
 
