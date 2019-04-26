@@ -7,8 +7,6 @@
   
   const [folderName, path] = argv._;
   const stateless = argv.ns;
-
-  console.log(argv);
   
   if (!folderName) {
     console.log('[ERROR]: Must supply a component name')

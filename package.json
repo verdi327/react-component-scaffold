@@ -1,6 +1,6 @@
 {
   "name": "react-component-scaffold",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Automatically generate state and stateless component folder structures from the command line",
   "main": "index.js",
   "files": ["index.js"],
